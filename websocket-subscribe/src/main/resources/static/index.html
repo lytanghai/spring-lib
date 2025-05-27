@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin-User WebSocket Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+</head>
+<body>
+<h1>Subscribe to Admin Channels</h1>
+
+<label for="adminSelect">Choose Admin:</label>
+<select id="adminSelect">
+    <option value="admin1">Admin 1</option>
+    <option value="admin2">Admin 2</option>
+</select>
+
+<button onclick="subscribe()">Subscribe</button>
+<button onclick="unsubscribe()">Unsubscribe</button>
+
+<ul id="messages"></ul>
+
+<hr>
+
+<h2>Send Message From Admin Channel</h2>
+<label for="sendAdminId">Admin ID:</label>
+<input id="sendAdminId" value="admin1" />
+<br />
+<textarea id="msgContent" placeholder="Message content"></textarea>
+<br />
+<button onclick="sendMessage()">Send Message</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
