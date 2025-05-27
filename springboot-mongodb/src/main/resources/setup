@@ -1,0 +1,27 @@
+db.customerContactDetails.insertOne({
+    email: "tangha2i@gmail.com",
+        mobile: "093686686",
+        address: "p2p2"
+});
+
+db.customerContactDetails.insertOne({
+    email: "tanghai@gmail.com",
+        mobile: "09360686686",
+        address: "pp"
+});
+
+
+db.customer.insertOne({
+    name: "tanghai2",
+    role: "admin",
+    age: 21,
+    contactId: "66798c5b3cafb0bd45a34233"
+});
+
+db.customer.insertOne({
+    name: "tanghai",
+    role: "user",
+    age: 21,
+    contactId: "66798c523cafb0bd45a34232"
+});
+

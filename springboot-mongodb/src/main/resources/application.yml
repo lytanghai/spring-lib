@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: dynamic_query
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: config
+
+server:
+  port: 8080

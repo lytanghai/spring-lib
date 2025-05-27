@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: projects
+  datasource:
+    hikari:
+      connection-timeout: 10000
+      keepalive-time: 600000
+      idle-timeout: 1200000
+      initialization-fail-timeout: 10000
+      max-lifetime: 3600000
+      maximum-pool-size: 10000
+      minimum-idle: 10
+      pool-name: ConnectionPool
+      register-mbeans: false
+      validation-timeout: 5000
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        enable_lazy_load_no_trans: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    open-in-view: false
