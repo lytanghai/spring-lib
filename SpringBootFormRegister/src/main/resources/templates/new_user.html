@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Customer Management System</title>
+<link rel="stylesheet" 
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<h1>Customer Form Insert</h1>
+		<hr>
+		<h2>Save New Customer</h2>
+		<br><br>
+		<form action="#"th:action="@{/saveUser}" th:object="${User}" method="POST" class="text-align:center">
+			<input type="text" th:field="*{id}" placeholder="ID" class="form-control mb-4 col-4">
+			<input type="text" th:field="*{firstName}" placeholder="First Name" class="form-control mb-4 col-4">
+			<input type="text" th:field="*{lastName}" placeholder="Last Name" class="form-control mb-4 col-4">
+			<input type="text" th:field="*{dob}" placeholder="Date of Birth" class="form-control mb-4 col-4">
+			<input type="text" th:field="*{address}" placeholder="Current Address" class="form-control mb-4 col-4">
+			<input type="text" th:field="*{phoneNumber}" placeholder="Phone Number" class="form-control mb-4 col-4">
+
+			<button type="submit" class="btn btn-info col-2">Save</button>
+		</form>
+		<hr>
+		<a th:href="@{/}"> Back to User List </a>
+	</div>
+</body>
+</html>
